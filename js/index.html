@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>audio.js</title>
+    <script src="./audiojs/audio.min.js"></script>
+    <link rel="stylesheet" href="./includes/index.css" media="screen">
+    <script>
+      audiojs.events.ready(function() {
+        audiojs.createAll();
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>audio.js</h1>
+    </header>
+
+    <audio src="http://aacdlb.cdn.kuwo.cn/4ef92a66ba79e5c41650460c40b90f8b/517382db/resource/a2/48/77/88/1109522288.aac" autoplay></audio>
+
+    <h3>Browser & format support</h3>
+    <p>With Flash as a fallback, it should work pretty much anywhere.<br>
+      It has been verified to work across:</p>
+    <ul>
+      <li>Mobile Safari <em>(iOS 3+)</em></li>
+      <li>Android <em>(2.2+, w/Flash)</em></li>
+      <li>Safari <em>(4+)</em></li>
+      <li>Chrome <em>(7+)</em></li>
+      <li>Firefox <em>(3+, w/ Flash)</em></li>
+      <li>Opera <em>(10+, w/ Flash)</em></li>
+      <li>IE <em>(6, 7, 8, w/ Flash)</em></li>
+    </ul>
+    <p><strong>ogg</strong></p>
+    <p>audio.js focuses on playing mp3s. It doesn’t currently support the ogg format. As mp3 is the current defacto music transfer format, ogg support is lower on our list of priorities.</p>
+
+
+  </body>
+</html>
