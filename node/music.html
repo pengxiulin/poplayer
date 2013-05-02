@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐测试</title>
+</head>
+<body>
+<fieldset>
+    <legend>搜索api测试</legend>
+    <form action="http://player.kuwo.cn/webmusic/webmusic2011/search.jsp" method="post">
+        <input type="text" name="key"/>
+        <input type="submit"/>
+    </form>
+</fieldset>
+<fieldset>
+    <legend>根据rid获得下载地址</legend>
+    <form action="http://antiserver.kuwo.cn/anti.s">
+        <input type="text" name="rid"/>
+        <input type="hidden" name="format" value="aac" />
+        <input type="hidden" name="type" value="convert_url" />
+        <input type="submit" value="查询下载地址"/>
+    </form>
+</fieldset>
+<div>http://aacdla.cdn.kuwo.cn/10de8d7aba993b5a9e989ac3852dd3c4/516cae76/resource/a3/48/92/71/1538462954.aac</div>
+
+<div>
+    返回后，访问
+        http://antiserver.kuwo.cn/anti.s?rid=MUSIC_3325222&format=aac&type=convert_url
+    获得文件地址。
+</div>
+    <audio controls>
+        <source src="http://aacdla.cdn.kuwo.cn/47f5db02aa94e75715c9f93ef0f53a0c/516cdeef/resource/a3/48/92/71/1538462954.aac"/>
+        not supported;
+    </audio>
+<script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+<script>
+$("a").bind("click",function(){
+    console.log($(this).attr("href").substr("1"));
+});
+</script>
+</body>
+</html>

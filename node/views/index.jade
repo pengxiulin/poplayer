@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    fieldset
+        legend 搜索api测试
+        form(action="search")
+            input(type="search",name="key",value="周晓鸥 九个太阳")
+            input(type="submit",value="搜索")
+    fieldset
+        legend 根据rid获得下载地址
+        form(action="music.aac")
+            input(type="search",name="rid",value="MUSIC_3289636")
+            input(type="text",name="name",value="爱情宣言+九个太阳")
+            input(type="submit",value="搜索")
+    fieldset
+        legend 音乐试听
+        audio(controls)
+            source(src="music/爱情宣言+九个太阳.aac")
+
